@@ -1,16 +1,12 @@
-FROM alpine:latest
+FROM centos:latest
 
 MAINTAINER Alejandro Baez <https://twitter.com/a_baez>
 
-ENV USER ""
+RUN yum install -y add libpng gcc sudo
 
-RUN apk -U add libpng gcc sudo bash
+RUN adduser user
 
 RUN mkdir /starbound
-WORKDIR /starbound
-
-RUN adduser user -Dg ''
-RUN echo "user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/user
 RUN chown user /starbound
 
 VOLUME /starbound
@@ -19,7 +15,8 @@ EXPOSE 21025
 EXPOSE 21026
 
 USER user
+WORKDIR /starbound/data/noarch/game/linux
 
-ENTRYPOINT ["/starbound/data/noarch/start.sh"]
+ENTRYPOINT ["./starbound_server"]
 
-CMD ["-r"]
+
