@@ -1,0 +1,7 @@
+app:
+  build: .
+  ports:
+    - "21026:21026"
+    - "21025:21025"
+  volumes:
+    - /data/Downloads/sb:/starbound
