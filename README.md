@@ -27,6 +27,6 @@ And you're done! The server should now be running with the ports `20125:20126` *
 [2i]: https://img.shields.io/badge/twitter-a_baez-blue.svg
 [2p]: https://twitter.com/a_baez
 
-[steam]:
-[starbound]:
-[gog]:
+[steam]: https://hub.docker.com/r/abaez/starbound/
+[starbound]: http://playstarbound.com/
+[gog]: https://www.gog.com/game/starbound
