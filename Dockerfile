@@ -2,7 +2,7 @@ FROM centos:latest
 
 MAINTAINER Alejandro Baez <https://twitter.com/a_baez>
 
-RUN yum install -y add libpng gcc sudo
+RUN yum install -y add libpng gcc
 
 RUN adduser user
 RUN mkdir /starbound
